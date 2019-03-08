@@ -195,15 +195,18 @@ AFRAME.registerComponent('particle-system', {
 
 
         this.presets['fire'] = {
-            maxAge: 1,
+            maxAge: .5,
             positionSpread: {x:0,y:0,z:0},
             rotationAngle: 0,
-            accelerationValue: {x: 0, y: 0, z: 0},
-            accelerationSpread: {x: 0.2, y: 1, z: 0.2},
+            accelerationValue: {x: 0, y: 1, z: 0},
+            accelerationSpread: {x: 0.2, y: .3, z: 0.2},
             velocityValue: {x: 0, y: 2, z: 0},
-            velocitySpread: {x: 2, y: 2, z: 2},
+            velocitySpread: {x: 2, y: 1, z: 2},
             color: ['#ff0000','#fff000'],
             particleCount: 1000,
+            size:.5,
+            blending:2,
+            dragValue: .5,
             texture: 'https://cdn.rawgit.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/images/smokeparticle.png'
         };
 
